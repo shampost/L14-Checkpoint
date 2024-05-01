@@ -1,7 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     initializeForm();
-// });
-
 // function initializeForm() {
 //     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 //     const meals = ['Breakfast', 'Snack1', 'Lunch', 'Snack2', 'Dinner'];
@@ -42,7 +38,6 @@
 //     let newPageContent = `
 //         <html>
 //         <head>
-//             <title>Your Meal Plan</title>
 //             <style>body { font-family: 'Courier New', monospace; }</style>
 //         </head>
 //         <body>
@@ -73,30 +68,23 @@
 //     document.write(newPageContent);
 // }
 
-// function validateEmail(email) {
-//     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-//     return regex.test(email);
-// }
+const days = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday",
+];
 
-// function clearForm() {
-//     document.getElementById('mealPlannerForm').reset();
-// }
+const meals = ["Breakfast", "First Snack", "Lunch", "Second Snack", "Dinner"];
 
 document.addEventListener("DOMContentLoaded", function () {
   initializeForm();
 });
 
 function initializeForm() {
-  const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-  const meals = ["Breakfast", "First Snack", "Lunch", "Second Snack", "Dinner"];
   const mealPlannerForm = document.getElementById("mealPlannerForm");
 
   mealPlannerForm.appendChild(document.createElement("div"));
@@ -137,17 +125,6 @@ function generateMealPlan() {
             <h1>Meal Plan for ${document.getElementById("name").value}</h1>
             <p>Goal of the Week: ${document.getElementById("goal").value}</p>
     `;
-
-  const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-  const meals = ["Breakfast", "First Snack", "Lunch", "Second Snack", "Dinner"];
 
   days.forEach((day) => {
     newPageContent += `<h2>${day}</h2>`;
