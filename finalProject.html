@@ -97,14 +97,40 @@
             display: flex;
             align-items: center;
         }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
     </style>
 
 <body>
     <header>
         <img src="form_banner.png" alt="Form Banner">
-        <h1>Build Your Meal Plan</h1>
-        <p>Cristian Campos - WEB-115 - Section 003</p>
     </header>
+    <form id="userInfoForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="goal">Goal:</label><br>
+        <input type="text" id="goal" name="goal" required><br>
+    </form>
 
     <form id="mealPlannerForm">
     </form>
@@ -116,40 +142,3 @@
 </body>
 
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-    <title>WEB-115 Final Project</title>
-    <style>
-        .banner-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .form-banner {
-            width: 50%;
-            height: auto;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="banner-container">
-        <img class="form-banner" src="form_banner.png" alt="Form Banner">
-    </div>
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="goal">Goal for the week:</label><br>
-        <textarea id="goal" name="goal"></textarea><br>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-
-</html> 
--->
